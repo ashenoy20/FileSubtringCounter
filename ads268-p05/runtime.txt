@@ -1,0 +1,21 @@
+Runtime Standard I/O
+
+- Command used: time ./p05 test.txt jj
+
+- Output:
+	real	0m0.345s
+	user	0m0.136s
+	sys	0m0.173s
+
+Runtime Unix System Calls
+
+- Command used: time ./p05 --systemcalls test.txt jj
+
+- Output:
+	real	0m9.442s
+	user	0m2.577s
+	sys	0m6.685s
+
+Conclusion:
+ - Using the test text file, which is around 11MB, we clearly see a difference in runtime. Based off the results, Standard I/O takes less than 1 second to search for all instances of the substring, while it takes the system calls a little over 9 seconds to finish searching and counting. Therefore, we can see that system calls are costly operations that don't do well when the size of the input text file increases and Standard I/O is best suited for larger files.
+
