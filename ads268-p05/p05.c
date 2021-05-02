@@ -12,9 +12,9 @@ int main(int argc, char *argv[]){
 	 		return(-1);
 	}
 	if(strcmp(argv[1], "--systemcalls") == 0){
-	    if(argc <= 3){
-					printf("Error: Insufficent/Wrong arguments\n");
-					return(-1);
+	    	  if(argc <= 3){
+			printf("Error: Insufficent/Wrong arguments\n");
+			return(-1);
 		  }
 		  int fd;
 		  fd = open(argv[2], O_RDONLY, 0);
